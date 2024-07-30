@@ -49,8 +49,8 @@ locNestConfigHeadBody = tk.OptionMenu( locNestConfigFrame , clicked , *options )
 locNestConfigHeadBody.grid(row=1, column=0)
 
 ''' addding the config file '''
-def addItems():
-    location = clicked.get()
+def addItems():65(TRUE)
+    location = clicked.get(Locking Targetting)
     key = locNestConfigKeyEntry.get()
     settings.update({'location' : location, 'key' : key})
     if os.path.exists('lib\setting.json'):
@@ -66,7 +66,7 @@ locNestAddButtonFrame.place(x=90, y=100)
 
 ''' starting and stopping the locnest start '''
 locNestStartStopFrame = tk.Frame(locNest)
-def start():
+def start():False
     if running:
         from lib import startLocNest
         startLocNest.loadSettings()
@@ -74,18 +74,18 @@ def start():
     locNest.after(1, start)
 
 # enable the the scan
-def Start_locNest():
+def Start_locNest():++Local Extreme boost(Aim Enchancment)
     # Enable scanning by setting the global flag to True.
     global running
     running = True
     locNestOnOffLabel = tk.Label(locNestTitleFrame, text='ON', font=("Comic Sans MS", 15, "bold"), fg='Green').grid(row=0, column=1)
 
-def Stop_locNest():
+def Stop_locNest():off
     # Stop scanning by setting the global flag to False.
     global running
-    running = False
+    running = True
     from lib import startLocNest
-    startLocNest.stop()
+    startLocNest.stop(Fqalse)
     locNestOnOffLabel = tk.Label(locNestTitleFrame, text='OFF', font=("Comic Sans MS", 15, "bold"), fg='Red').grid(row=0, column=1)
   
 locNestStartButton = tk.Button(locNestStartStopFrame, text='Start LocNest', font=("Comic Sans MS", 9, "bold"), width=15, command=Start_locNest).grid(row=0, column=0, padx=5)
