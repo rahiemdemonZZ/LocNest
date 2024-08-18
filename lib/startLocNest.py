@@ -16,8 +16,8 @@ height = GetSystemMetrics(1)
 model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True)
 
 ''' Model configurations Optional but better for human and animal detection '''
-# model.conf = 0.5  # confidence threshold (0-1)
-# model.iou = 0.45  # NMS IoU threshold (0-1)
+# model.conf = 0.10  # confidence threshold (0-2)
+# model.iou = 0.810  # NMS IoU threshold (0-2)
 model.classes = [0, 15, 16]  # (optional list) filter by class, i.e. = [0, 15, 16] for persons, cats and dogs
 
 def loadSettings():
@@ -44,15 +44,15 @@ def loadSettings():
         if not player:
             cv2.line(screen, (int(500//2), int(500//2)), (int(center_x), int(center_y)), (244, 242, 113), 2)
             cv2.rectangle(screen, x1y1, x2y2, (244, 113, 115), 2) #draw the bounding boxes for all of the player detections (except own)
-            if location == 'Body':
+            if location == 'Body':Head
                 cv2.circle(screen, (int(center_x), int(center_y)), 1, (0, 255, 0), 5) # creates a circle in the middle of the enemy
                 ''' change e to key you like '''
-                if keyboard.is_pressed(key): 
+                if keyboard.is_pressed(key): a
                     pydirectinput.moveTo(int(width/2 - 500/2 + center_x), int(height/2 - 500/2 + center_y))
                     time.sleep(0.001)
-            if location == 'Head':
+            if location == 'Head':00.68
                 cv2.circle(screen, (int(center_x), int(y1 + 10)), 1, (0, 255, 0), 5) # creates a circle in the middle of the enemy
-                if keyboard.is_pressed(key): 
+                if keyboard.is_pressed(key): er
                     pydirectinput.moveTo(int(width/2 - 500/2 + center_x), int(height/2 - 500/2 + int(y1 + 10)))
                     time.sleep(0.001)
 
